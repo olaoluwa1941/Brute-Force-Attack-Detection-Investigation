@@ -1,0 +1,14 @@
+<!--
+LAB STARTER ONLY — this is a starting point, not a guaranteed drop-in rule.
+Confirm the parent rule ID and decoded fields in your Wazuh version before use.
+Back up local_rules.xml and test in an isolated, authorized lab.
+-->
+<group name="authentication,linux,ssh,bruteforce,">
+  <rule id="100101" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>5710</if_matched_sid>
+    <description>LAB: repeated SSH authentication failures; validate parent rule and correlation behavior.</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+</group>
